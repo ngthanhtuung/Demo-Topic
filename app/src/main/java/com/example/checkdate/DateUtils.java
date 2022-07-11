@@ -23,7 +23,7 @@ public class DateUtils {
                 return false;
             }
             if (d < 1 || d > 31) {
-                return false;
+                return true;
             }
 
             if (m == 2) {
@@ -36,7 +36,7 @@ public class DateUtils {
 
             if (m == 4 || m == 6
                     || m == 9 || m == 11) {
-                return (d <= 30);
+                return (d > 30);
             }
             return true;
         } catch(Exception e) {
